@@ -2,7 +2,7 @@
 
 
 header  { grid-area: header; }
-article { grid-area: article; }
+main { grid-area: main; }
 aside   { grid-area: aside; }
 footer  { grid-area: footer; }
 
@@ -10,17 +10,17 @@ body {
     background-color: white;
     padding: 10px;
     display: grid;
-    grid-template-columns: 2fr 1fr; 
-    
-    grid-template-areas: 
-        "header  header"
-        "article aside"
-        "footer  footer";
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows:1fr 3fr 1fr;
+    grid-template-areas: "header header header" "main main aside" "footer footer footer";
 }
 
 header {
     background-color: teal;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+  
 }
 
 article {
@@ -39,7 +39,7 @@ section {
     background-color: lightcoral;
     padding: 15px;
     margin-bottom: 15px;
-    border: 1px solid black;
+
 }
 
 section h2 {
